@@ -4,11 +4,20 @@ import "fmt"
 
 func main() {
 	// var card string = "Ace of Spades"
-	card := "Ace of Spades"
-	card = "Five of Diamonds"
-	fmt.Println(card)
+	// card := newCard()
+	// fmt.Println(card)
+
+	cards := []string{"Ace of Diamonds", newCard()}
+	cards = append(cards, "Six of Spades")
+
+	//fmt.Println(cards)
+
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
+
 }
 
-func newCard() {
-	
+func newCard() string {
+	return "Five of Diamonds"
 }
