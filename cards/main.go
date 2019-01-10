@@ -1,10 +1,13 @@
 package main
 
+import "fmt"
+
 func main() {
 	cards := newDeck()
-	cards.saveToFile("my_cards")
-	readCards := newDeckFromFile("my_cards")
-	readCards.print()
+	cards.print()
+	fmt.Println("------")
+	cards.shuffle()
+	cards.print()
 }
 
 func newCard() string {
